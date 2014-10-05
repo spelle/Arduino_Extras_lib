@@ -18,21 +18,32 @@
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release.311709497" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release.1501126900" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release"/>
 							<targetPlatform id="de.innot.avreclipse.targetplatform.winavr.lib.release.1370730243" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.lib.release"/>
-							<builder buildPath="${workspace_loc:/Arduino_Extras_lib}/Release" id="de.innot.avreclipse.target.builder.winavr.lib.release.1888303055" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.lib.release"/>
+							<builder buildPath="${workspace_loc:/Arduino_Extras_lib}/Release" id="de.innot.avreclipse.target.builder.winavr.lib.release.1888303055" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.lib.release">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Arduino_Uno_Rev3"/>
+								</outputEntries>
+							</builder>
 							<tool id="de.innot.avreclipse.tool.assembler.winavr.lib.release.1337416026" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.lib.release">
 								<option id="de.innot.avreclipse.assembler.option.debug.level.467535133" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level" value="de.innot.avreclipse.assembler.option.debug.level.none" valueType="enumerated"/>
+								<option id="de.innot.avreclipse.asm.option.include.paths.1222067944" name="#include paths for preprocessor(-I)" superClass="de.innot.avreclipse.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Core_lib/Arduino/hardware/arduino/cores/arduino"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Core_lib/Arduino/hardware/arduino/variants/standard"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/RobTillaart_Arduino/libraries/DHTlib"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/simple-modbus-master"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/simple-modbus-slave"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Core_lib/Arduino/libraries/SoftwareSerial"/>
+								</option>
 								<inputType id="de.innot.avreclipse.tool.assembler.input.721401662" superClass="de.innot.avreclipse.tool.assembler.input"/>
 							</tool>
 							<tool id="de.innot.avreclipse.tool.compiler.winavr.lib.release.668268149" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.lib.release">
 								<option id="de.innot.avreclipse.compiler.option.debug.level.1258221194" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" value="de.innot.avreclipse.compiler.option.debug.level.none" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.315939348" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.1282077027" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Core_lib/Arduino/hardware/arduino/cores/arduino}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Core_lib/Arduino/hardware/arduino/variants/standard}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Extras/RobTillaart_Arduino/libraries/DHTlib}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Extras/simple-modbus-master}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Extras/simple-modbus-slave}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Core_lib/Arduino/libraries/SoftwareSerial}&quot;"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Core_lib/Arduino/hardware/arduino/cores/arduino"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Core_lib/Arduino/hardware/arduino/variants/standard"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/RobTillaart_Arduino/libraries/DHTlib"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/simple-modbus-master"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/simple-modbus-slave"/>
 								</option>
 								<option id="de.innot.avreclipse.compiler.option.optimize.packstruct.1438961192" name="Pack structs (-fpack-struct)" superClass="de.innot.avreclipse.compiler.option.optimize.packstruct" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.shortenums.392932980" name="Short enums (-fshort-enums)" superClass="de.innot.avreclipse.compiler.option.optimize.shortenums" value="false" valueType="boolean"/>
@@ -50,12 +61,11 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.debug.level.942005488" name="Generate Debugging Info" superClass="de.innot.avreclipse.cppcompiler.option.debug.level" value="de.innot.avreclipse.cppcompiler.option.debug.level.none" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.1593347408" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize" value="de.innot.avreclipse.cppcompiler.optimize.size" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.incpath.169214137" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Core_lib/Arduino/hardware/arduino/cores/arduino}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Core_lib/Arduino/hardware/arduino/variants/standard}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Extras/RobTillaart_Arduino/libraries/DHTlib}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Extras/simple-modbus-master}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Extras/simple-modbus-slave}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Arduino_Core_lib/Arduino/libraries/SoftwareSerial}&quot;"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Core_lib/Arduino/hardware/arduino/cores/arduino"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Core_lib/Arduino/hardware/arduino/variants/standard"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/RobTillaart_Arduino/libraries/DHTlib"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/simple-modbus-master"/>
+									<listOptionValue builtIn="false" value="../Arduino_Extras_lib/Arduino_Extras_lib/Extras/simple-modbus-slave"/>
 								</option>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.packstruct.839084077" name="Pack structs (-fpack-struct)" superClass="de.innot.avreclipse.cppcompiler.option.optimize.packstruct" value="false" valueType="boolean"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.shortenums.151019909" name="Short enums (-fshort-enums)" superClass="de.innot.avreclipse.cppcompiler.option.optimize.shortenums" value="false" valueType="boolean"/>
@@ -77,10 +87,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Extras/RobTillaart_Arduino/libraries/DHTlib"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Extras/simple-modbus-master"/>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Extras/simple-modbus-slave"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="SimpleSWModbusSlave"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Extras/RobTillaart_Arduino/libraries/DHTlib"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Extras/simple-modbus-master"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Extras/simple-modbus-slave"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -100,5 +109,9 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Arduino_Uno_Rev3">
+			<resource resourceType="PROJECT" workspacePath="/Arduino_Extras_lib"/>
+		</configuration>
+	</storageModule>
 </cproject>
